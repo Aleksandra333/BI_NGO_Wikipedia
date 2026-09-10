@@ -1,1 +1,944 @@
+```css
+/* =====================================================
+   DARK WIKIPEDIA REPORT
+   ===================================================== */
+
+
+/* =====================================================
+   VARIABLES
+   ===================================================== */
+
+:root {
+
+    /* Legacy palette */
+
+    --green: #039600;
+    --blue: #0063BF;
+    --red: #900000;
+
+    /* Legacy AAA */
+
+    --green-aaa: #246342;
+    --blue-aaa: #0C57A8;
+    --red-aaa: #970302;
+
+
+    /* Background */
+
+    --background: #0b0b0b;
+
+    --surface: #151515;
+    --surface-2: #1d1d1d;
+    --surface-3: #252525;
+
+
+    /* Borders */
+
+    --border: #444;
+    --border-light: #333;
+
+
+    /* Text */
+
+    --text: #f8f9fa;
+    --text-secondary: #c8c8c8;
+    --text-muted: #999;
+    --text-subtle: #777;
+
+
+    /* Links */
+
+    --link: #6fa8dc;
+    --link-hover: #9fc5e8;
+
+
+    /* Layout */
+
+    --max-width: 1200px;
+}
+
+
+/* =====================================================
+   RESET
+   ===================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   LINKS
+   ===================================================== */
+
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover);
+    text-decoration: underline;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.site-header {
+    border-bottom: 1px solid var(--border);
+
+    background: #080808;
+}
+
+.header-inner {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 18px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.site-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.site-logo {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid var(--border);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 24px;
+}
+
+.site-name {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 20px;
+}
+
+.site-subtitle {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.header-meta {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   MAIN
+   ===================================================== */
+
+main {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 35px 40px 70px;
+}
+
+
+/* =====================================================
+   ARTICLE HEADER
+   ===================================================== */
+
+.article-header {
+    margin-bottom: 25px;
+}
+
+.breadcrumbs {
+    margin-bottom: 8px;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+h1,
+h2,
+h3 {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: normal;
+}
+
+h1 {
+    margin: 0;
+
+    padding-bottom: 10px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 34px;
+    line-height: 1.2;
+}
+
+.lead {
+    max-width: 850px;
+
+    margin: 15px 0 5px;
+
+    color: var(--text-secondary);
+
+    font-size: 17px;
+}
+
+.article-info {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   HEADINGS
+   ===================================================== */
+
+h2 {
+    margin-top: 42px;
+    margin-bottom: 18px;
+
+    padding-bottom: 6px;
+
+    border-bottom: 1px solid var(--border);
+
+    font-size: 25px;
+}
+
+h3 {
+    margin-top: 28px;
+
+    font-size: 18px;
+}
+
+p {
+    margin: 0 0 16px;
+}
+
+
+/* =====================================================
+   INFOBOX
+   ===================================================== */
+
+.infobox {
+    float: right;
+
+    width: 320px;
+
+    margin: 0 0 25px 30px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    font-size: 14px;
+}
+
+.infobox-title {
+    padding: 10px;
+
+    background: var(--surface-2);
+
+    border-bottom: 1px solid var(--border);
+
+    text-align: center;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 19px;
+    font-weight: bold;
+}
+
+.infobox-image {
+    padding: 12px;
+}
+
+.infobox-placeholder {
+    height: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515,
+            #222
+        );
+
+    border: 1px solid var(--border);
+
+    color: var(--text-muted);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    letter-spacing: 3px;
+}
+
+.infobox-row {
+    display: grid;
+
+    grid-template-columns: 40% 60%;
+
+    border-top: 1px solid var(--border);
+}
+
+.infobox-label {
+    padding: 8px;
+
+    color: var(--text-secondary);
+
+    font-weight: bold;
+}
+
+.infobox-value {
+    padding: 8px;
+}
+
+
+/* =====================================================
+   STATUS
+   ===================================================== */
+
+.status-green {
+    color: #6fbd70;
+}
+
+
+/* =====================================================
+   TABLE OF CONTENTS
+   ===================================================== */
+
+.toc {
+    display: inline-block;
+
+    min-width: 300px;
+
+    max-width: 100%;
+
+    margin: 15px 0 25px;
+
+    padding: 15px 25px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+}
+
+.toc-title {
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+.toc ol {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.toc li {
+    margin: 3px 0;
+}
+
+.toc ol ol {
+    margin-top: 3px;
+}
+
+
+/* =====================================================
+   NOTICE
+   ===================================================== */
+
+.notice {
+    margin: 22px 0;
+
+    padding: 13px 17px;
+
+    background: var(--surface);
+
+    border-left: 4px solid;
+}
+
+.blue-border {
+    border-left-color: var(--blue);
+}
+
+.green-border {
+    border-left-color: var(--green);
+}
+
+.red-border {
+    border-left-color: var(--red);
+}
+
+
+/* =====================================================
+   KPI
+   ===================================================== */
+
+.kpi-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin: 25px 0;
+}
+
+.kpi {
+    min-height: 150px;
+
+    padding: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-top: 3px solid;
+}
+
+.kpi.green {
+    border-top-color: var(--green);
+}
+
+.kpi.blue {
+    border-top-color: var(--blue);
+}
+
+.kpi.red {
+    border-top-color: var(--red);
+}
+
+.kpi-label {
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+.kpi-value {
+    margin-top: 3px;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+.kpi-change {
+    margin-top: 8px;
+
+    font-size: 13px;
+}
+
+.kpi-description {
+    margin-top: 8px;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   POSITIVE / NEGATIVE
+   ===================================================== */
+
+.positive {
+    color: #6fbd70;
+}
+
+.negative {
+    color: #d66;
+}
+
+
+/* =====================================================
+   CHART
+   ===================================================== */
+
+.chart {
+    margin: 25px 0;
+
+    padding: 20px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+}
+
+.chart-header {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+.chart-title {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 18px;
+}
+
+.chart-subtitle {
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+.legend {
+    color: var(--text-secondary);
+
+    font-size: 12px;
+}
+
+.legend-dot {
+    width: 9px;
+    height: 9px;
+
+    display: inline-block;
+
+    margin-right: 5px;
+
+    border-radius: 50%;
+}
+
+.legend-dot.green {
+    background: var(--green);
+}
+
+
+/* =====================================================
+   MOCK CHART
+   ===================================================== */
+
+.mock-chart {
+    display: grid;
+
+    grid-template-columns: 45px 1fr;
+
+    grid-template-rows: 250px 30px;
+}
+
+.y-axis {
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    padding: 0 8px 0 0;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+
+    text-align: right;
+}
+
+.chart-area {
+    position: relative;
+
+    border-left: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.grid-line {
+    position: relative;
+
+    height: 25%;
+
+    border-top: 1px dashed #333;
+}
+
+.chart-svg {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: visible;
+}
+
+.chart-svg circle {
+    fill: var(--green);
+}
+
+.x-axis {
+    grid-column: 2;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-top: 7px;
+
+    color: var(--text-muted);
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   TABLE
+   ===================================================== */
+
+table {
+    width: 100%;
+
+    margin: 20px 0;
+
+    border-collapse: collapse;
+
+    background: var(--surface);
+
+    font-size: 14px;
+}
+
+caption {
+    margin-bottom: 8px;
+
+    color: var(--text-muted);
+
+    text-align: left;
+
+    font-size: 13px;
+}
+
+th,
+td {
+    padding: 9px 10px;
+
+    border: 1px solid var(--border);
+
+    text-align: left;
+}
+
+th {
+    background: var(--surface-2);
+
+    color: var(--text);
+}
+
+tbody tr:nth-child(even) {
+    background: #181818;
+}
+
+tbody tr:hover {
+    background: var(--surface-3);
+}
+
+
+/* =====================================================
+   BADGES
+   ===================================================== */
+
+.badge {
+    display: inline-block;
+
+    padding: 2px 7px;
+
+    border: 1px solid;
+
+    font-size: 11px;
+}
+
+.green-badge {
+    border-color: var(--green-aaa);
+
+    color: #75b878;
+}
+
+.red-badge {
+    border-color: var(--red-aaa);
+
+    color: #d97979;
+}
+
+
+/* =====================================================
+   CONCLUSIONS
+   ===================================================== */
+
+.conclusion-grid {
+    display: grid;
+
+    gap: 12px;
+
+    margin-top: 20px;
+}
+
+.conclusion {
+    display: grid;
+
+    grid-template-columns: 60px 1fr;
+
+    gap: 15px;
+
+    padding: 17px;
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-left: 4px solid;
+}
+
+.conclusion-number {
+    color: var(--text-muted);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 24px;
+}
+
+.conclusion h3 {
+    margin: 0 0 5px;
+
+    font-size: 18px;
+}
+
+.conclusion p {
+    margin: 0;
+
+    color: var(--text-secondary);
+}
+
+
+/* =====================================================
+   LISTS
+   ===================================================== */
+
+ul,
+ol {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+
+/* =====================================================
+   REFERENCES
+   ===================================================== */
+
+.references {
+    color: var(--text-secondary);
+
+    font-size: 13px;
+}
+
+.references li {
+    margin-bottom: 8px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    border-top: 1px solid var(--border);
+
+    background: #080808;
+}
+
+.footer-inner {
+    max-width: var(--max-width);
+
+    margin: 0 auto;
+
+    padding: 25px 40px 35px;
+
+    color: var(--text-muted);
+
+    font-size: 12px;
+}
+
+.footer-inner > div {
+    margin-bottom: 5px;
+}
+
+.footer-meta {
+    margin-top: 15px;
+}
+
+
+/* =====================================================
+   CLEARFIX
+   ===================================================== */
+
+main::after {
+    content: "";
+
+    display: table;
+
+    clear: both;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 800px) {
+
+    .header-inner {
+        padding: 15px 20px;
+    }
+
+    main {
+        padding: 25px 20px 50px;
+    }
+
+    .header-meta {
+        display: none;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    .infobox {
+        float: none;
+
+        width: 100%;
+
+        margin: 20px 0;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chart {
+        overflow-x: auto;
+    }
+
+    .mock-chart {
+        min-width: 600px;
+    }
+
+    table {
+        display: block;
+
+        overflow-x: auto;
+
+        white-space: nowrap;
+    }
+
+    .footer-inner {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+/* =====================================================
+   PRINT / PDF
+   ===================================================== */
+
+@media print {
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .site-header,
+    footer {
+        background: white;
+        color: black;
+    }
+
+    a {
+        color: black;
+    }
+
+    .infobox,
+    .toc,
+    .chart,
+    .kpi,
+    .conclusion {
+        break-inside: avoid;
+    }
+
+    h2 {
+        break-after: avoid;
+    }
+}
+```
 
