@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -360,11 +359,88 @@
                     </div>
                 </div>
 
+                <section id="wykresy" class="report-section">
+                    <h2>Wykresy</h2>
 
-                <!--
-                    Tutaj możesz wstawić Chart.js,
-                    SVG albo własny wykres.
-                -->
+                    <p class="section-intro">
+                        Poniższe wykresy przedstawiają miesięczne zmiany liczby nowych artykułów,
+                        aktywnych edytorów, oglądalności oraz edycji artykułów przez użytkowników.
+                    </p>
+
+                    <div class="charts-grid">
+
+                        <!-- 1. Nowe artykuły -->
+                        <article class="chart-card chart-card-wide">
+                            <div class="chart-header">
+                                <div>
+                                    <h3>Liczba nowych artykułów na miesiąc</h3>
+                                    <p>
+                                        Miesięczna liczba nowych artykułów.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="chart-container">
+                                <canvas id="newArticlesChart"></canvas>
+                            </div>
+                        </article>
+
+
+                        <!-- 2. Aktywni edytorzy -->
+                        <article class="chart-card chart-card-wide">
+                            <div class="chart-header">
+                                <div>
+                                    <h3>Liczba aktywnych edytorów w miesiącu</h3>
+                                    <p>
+                                        Liczba aktywnych edytorów w kolejnych miesiącach.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="chart-container">
+                                <canvas id="activeEditorsChart"></canvas>
+                            </div>
+                        </article>
+
+
+                        <!-- 3. Oglądalność -->
+                        <article class="chart-card chart-card-wide">
+                            <div class="chart-header">
+                                <div>
+                                    <h3>Oglądalność według platform</h3>
+                                    <p>
+                                        Liczba wyświetleń według rodzaju platformy.
+                                        Dane dotyczą użytkowników.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="chart-container chart-container-tall">
+                                <canvas id="viewsPlatformChart"></canvas>
+                            </div>
+                        </article>
+
+
+                        <!-- 4. Edycje -->
+                        <article class="chart-card chart-card-wide">
+                            <div class="chart-header">
+                                <div>
+                                    <h3>Edycje artykułów przez użytkowników</h3>
+                                    <p>
+                                        Porównanie edycji wykonywanych przez użytkowników
+                                        niezalogowanych i zalogowanych.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="chart-container chart-container-tall">
+                                <canvas id="userEditsChart"></canvas>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
 
                 <div class="mock-chart">
 
@@ -689,6 +765,8 @@
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="charts.js"></script>
 
 </body>
 </html>
