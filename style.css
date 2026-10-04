@@ -1060,6 +1060,19 @@ main::after {
 }
 
 
+.infobox-image {
+    width: 100%;
+    height: 200px; /* wysokość ramki — ustaw swoją */
+    overflow: hidden;
+}
+
+.infobox-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 
 
 
