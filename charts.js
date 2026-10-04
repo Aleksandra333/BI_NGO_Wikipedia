@@ -801,36 +801,42 @@ async function createUserEditsChart() {
     );
 
 
-    /*
-     * Notebook najpierw poprawia zapis daty:
-     *
-     * '--' → '-'
-     * '-0' → '-'
-     */
 
     rows = rows.map(row => {
+        /*
+        * CSV zapisuje miesiąc w nietypowym formacie:
+        *
+        * 2001--0-9-T00:00:00.000Z → 2001-09
+        * 2001--1-0-T00:00:00.000Z → 2001-10
+        * 2001--1-1-T00:00:00.000Z → 2001-11
+        * 2001--1-2-T00:00:00.000Z → 2001-12
+        *
+        * Wyciągamy rok oraz dwie cyfry miesiąca
+        * i tworzymy poprawną datę ISO.
+        */
 
-        const cleanedDate =
-            row.month
-                .replace(/--/g, "-")
-                .replace(/-0/g, "-");
+        const match = row.month.match(
+            /^(\d{4})--(\d)-(\d)-T/
+        );
 
+        let date = null;
+
+        if (match) {
+            const year = match[1];
+            const month = `${match[2]}${match[3]}`;
+
+            date = new Date(`${year}-${month}-01T00:00:00Z`);
+        }
 
         return {
             ...row,
-
-            date:
-                parseDate(cleanedDate),
-
-            editorType:
-                row.editor_type,
-
-            content:
-                numberOrZero(
-                    row["total.content"]
-                )
+            date,
+            editorType: row.editor_type,
+            content: numberOrZero(row["total.content"])
         };
     });
+
+
 
 
     /*
